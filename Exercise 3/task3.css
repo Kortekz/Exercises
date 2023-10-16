@@ -1,3 +1,14 @@
+
+
+/* Custom Properties */
+:root{
+    --favouriteColor: #6e004d;
+    --ptexts: #02a63e;
+    --headings: #820336;
+    --random: #41635f;
+}
+
+
 body {
     background-color: rgb(70, 132, 190);
 }
@@ -23,7 +34,7 @@ li::before {
 }
 
 li:hover {
-    color: white;
+    color: var(--headings);
     font-weight: bold;
 }
 
@@ -42,6 +53,18 @@ h1, h2, h3 {
 }
 
 .three {
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid var(--favouriteColor);
     padding: 10px;
+}
+
+p[title]{
+    color: var(--favouriteColor);
+}
+
+
+/* Media Query */
+@media screen and (max-width:700px) {
+    body{
+        background-color: #41635f;
+}
 }
